@@ -34,8 +34,9 @@ function AccountChatMessage({
           //setText('');
         }}
       >
+        <div className="chat-header">Chat by seller</div>
         <div className="chat-window">
-          <ul className="message-list">
+          <ul className="message-list" style={{ borderStyle: 'solid', borderColor: 'green' }}>
             <div>
               <div>
                 <p>Ваше сообщение: </p>
@@ -44,7 +45,6 @@ function AccountChatMessage({
               <h3>{`сообщение от ${chatMessage.User.name} :`}</h3>
               <p>{`${chatMessage.text}`}</p>
               <div className="chat-input">
-          
                 <input
                   className="message-input"
                   placeholder="Type your message here"
