@@ -62,14 +62,14 @@ function Account() {
   }
 
   return (
-    <div className='wrapper'>
-      <div className='wrapperinwrapper'>
+    <div className="wrapper">
+      <div className="wrapperinwrapper">
         {' '}
         <Profile />
       </div>
 
-      <div className='profil-box'>
-        <div className='service-item'>
+      <div className="profil-box">
+        <div className="service-item">
           {services.map((service) => (
             <div>
               <AccountService key={service.id} service={service} />
@@ -77,8 +77,9 @@ function Account() {
           ))}
         </div>
 
-        <div className='chat-account-container'>
-          <div className='chat-window'>
+        <div className="chat-account-container">
+          Chat by seller
+          <div className="chat-window">
             {messages.map((message) => (
               <AccountChatMessage
                 key={message.id}

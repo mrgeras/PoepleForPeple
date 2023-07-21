@@ -34,30 +34,27 @@ function AccountChatMessage({
           //setText('');
         }}
       >
-        <div className="chat-header">Chat by seller</div>
-        <div className="chat-window">
-          <ul className="message-list" style={{ borderStyle: 'solid', borderColor: 'green' }}>
-            <div>
-              <div>
-                <p>Ваше сообщение: </p>
-                <p>{`${chatMessage.text}`}</p>
-              </div>
-              <h3>{`сообщение от ${chatMessage.User.name} :`}</h3>
-              <p>{`${chatMessage.text}`}</p>
-              <div className="chat-input">
-                <input
-                  className="message-input"
-                  placeholder="Type your message here"
-                  type="text"
-                  onChange={(e) => setText(e.target.value)}
-                />
-                <button className="send-button" type="submit">
-                  Отправить
-                </button>
-              </div>
-            </div>
-          </ul>
+        <ul className="message-list"> </ul>
+        <div style={{ borderStyle: 'solid', borderColor: 'green' }}>
+          <div>
+            <p>{`${chatMessage.createdAt}`}</p>
+            {user && user.id !== chatMessage.User.id ? (
+              <p>{`Сообщение от : ${chatMessage.User.name}`}</p>
+            ) : (
+              <p style={{ color: 'red' }}>Сообщение от вас :</p>
+            )}
+            <p>{`${chatMessage.text}`}</p>
+          </div>
         </div>
+        <input
+          className="message-input"
+          placeholder="Type your message here"
+          type="text"
+          onChange={(e) => setText(e.target.value)}
+        />
+        <button className="send-button" type="submit">
+          Отправить
+        </button>
       </form>
     </div>
   );

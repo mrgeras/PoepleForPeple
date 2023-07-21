@@ -4,7 +4,8 @@
     align-items: center;
 }
 .chat-form {
-  width: 400px;
+  width: 600px;
+  height: 400px;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
