@@ -1,5 +1,4 @@
 *ts linguist-detectable=true
-*.js linguist-detectable=true
+*.js linguist-detectable=false
 *.html linguist-detectable=true
 *.css linguist-detectable=true
-*.react linguist-detectable=true
